@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+
+int findMax(int arr[], int n) {
+    
+    int max = arr[0];
+
+    for (int i = 1; i < n; i++) {
+    
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+
+int main() {
+    int arr[] = {18, 85, 97, 52, 15, 30};
+    int n = sizeof(arr) / sizeof(arr[0]); 
+
+    int maximum = findMax(arr, n);
+
+    printf("The maximum element in the array is: %d\n", maximum);
+    return 0;
+}
